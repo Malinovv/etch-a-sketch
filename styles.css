@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  width: 50%;
+  height: 50%;
+  background-color: brown;
+}
+
+.child {
+  width: 6.25%;
+  height: 6.25%;
+  background-color: aqua;
+  border: solid black 1px;
+}
+
+.child:hover {
+  background-color: blueviolet;
+}
