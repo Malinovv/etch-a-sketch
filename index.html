@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Etch-a-sketch</h1>
-    <div class="parent"></div>
-    <button id="reset">Reset</button>
+    <header>
+      <h1>Etch-a-sketch</h1>
+    </header>
+    <main>
+      <label for="gridSize">Grid Size:</label>
+      <input
+        type="range"
+        id="gridSize"
+        name="gridSize"
+        min="4"
+        max="60"
+        step="1"
+        value="16" />
+
+      <label for="colorPicker">Choose Color:</label>
+      <input type="color" id="colorPicker" name="colorPicker" value="#00ff00" />
+
+      <div class="parent"></div>
+      <button id="reset">Reset</button>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
