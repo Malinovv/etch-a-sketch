@@ -26,11 +26,9 @@ Open index.html in your preferred web browser.
 
 Enjoy drawing under the cosmic sky! 🎨🌌
 
-Contributing
-Feel free to contribute to make Starry Etch-a-Sketch even more amazing! Open an issue or create a pull request.
+## Contributing
 
-License
-This project is licensed under the MIT License.
+Feel free to contribute to make Starry Etch-a-Sketch even more amazing! Open an issue or create a pull request.
 
 Made with ❤️ by Malinovv 🚀
 
