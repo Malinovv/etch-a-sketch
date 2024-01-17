@@ -7,19 +7,16 @@ function createDivs(gridItems) {
   parentContainer.innerHTML = "";
   const gridPattern = gridItems * gridItems;
 
-  const childWidth = 24 / gridItems;
-  const childHeight = 24 / gridItems;
-
   for (let i = 0; i < gridPattern; i++) {
     const childDiv = document.createElement("div");
     childDiv.setAttribute("class", "child");
-    childDiv.style.width = `calc(${childWidth}em)`;
-    childDiv.style.height = `calc(${childHeight}em)`;
     parentContainer.appendChild(childDiv);
   }
 
   const children = document.querySelectorAll(".child");
   children.forEach((child) => {
+    child.style.width = `calc(100% / ${gridItems})`;
+    child.style.height = `calc(100% / ${gridItems})`;
     child.addEventListener("mouseover", changeColor);
   });
 }
@@ -32,20 +29,24 @@ function changeColor() {
 function resetColors() {
   const children = document.querySelectorAll(".child");
   children.forEach((child) => {
-    child.style.backgroundColor = "aqua";
+    child.style.backgroundColor = "transparent";
   });
 }
 
-createDivs(gridSizeInput.value);
+function updateGrid() {
+  const gridItems = gridSizeInput.value;
+  createDivs(parseInt(gridItems));
+}
 
 resetBtn.addEventListener("click", resetColors);
 
 gridSizeInput.addEventListener("input", () => {
-  const gridItems = gridSizeInput.value;
-  createDivs(parseInt(gridItems));
+  updateGrid();
 });
 
 colorPickerInput.addEventListener("input", () => {
   const gridItems = gridSizeInput.value;
   createDivs(parseInt(gridItems));
 });
+
+createDivs(gridSizeInput.value);
