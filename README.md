@@ -13,7 +13,7 @@ Welcome to Starry Etch-a-Sketch, where you can create a beautiful space-themed c
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/starry-etch-a-sketch.git
+git clone https://github.com/Malinovv/etch-a-sketch.git
 ```
 
 2. Open the project directory:
