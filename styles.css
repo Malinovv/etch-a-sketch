@@ -51,12 +51,30 @@ main {
   text-align: center;
 }
 
-label,
-input,
+label {
+  color: #ffffff; /* White text color for labels */
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="range"],
+input[type="color"],
 button {
-  margin: 10px;
-  padding: 8px;
+  margin: 1.5em 0 1.5em 0;
+}
+
+button {
+  background-color: transparent; /* Deep blue color for buttons */
+  color: #ffffff; /* White text color for buttons */
+  border: solid #fff 1px;
+  border-radius: 4px;
+  padding: 10px 20px;
   font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #283593; /* Darker blue color on hover */
 }
 
 .parent {

@@ -62,7 +62,6 @@ gridSizeInput.addEventListener("touchstart", handleTouchStart);
 gridSizeInput.addEventListener("touchmove", handleTouchMove);
 
 function handleTouchStart(event) {
-  // Store the initial touch position
   initialTouchX = event.touches[0].clientX;
 }
 
@@ -71,19 +70,14 @@ function handleTouchMove(event) {
     return;
   }
 
-  // Calculate the change in touch position
   const touchX = event.touches[0].clientX;
   const deltaX = touchX - initialTouchX;
 
-  // Adjust the grid size based on the touch movement
   gridSizeInput.value = parseInt(gridSizeInput.value) + deltaX;
 
-  // Update the grid
   updateGrid();
 
-  // Store the new initial touch position for the next event
   initialTouchX = touchX;
 }
 
-// Initial grid creation with default values
 createDivs(gridSizeInput.value);
