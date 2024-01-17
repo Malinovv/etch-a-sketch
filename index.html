@@ -6,27 +6,41 @@
     <title>Starry Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header>
       <h1>Starry Etch-a-Sketch</h1>
     </header>
-    <main>
-      <label for="gridSize">Star Density:</label>
-      <input
-        type="range"
-        id="gridSize"
-        name="gridSize"
-        min="4"
-        max="60"
-        step="1"
-        value="16" />
 
-      <label for="colorPicker">Star Color:</label>
-      <input type="color" id="colorPicker" name="colorPicker" value="#ffffff" />
+    <main>
+      <div>
+        <label for="gridSize">Star Density:</label>
+        <input
+          type="range"
+          id="gridSize"
+          name="gridSize"
+          min="4"
+          max="60"
+          step="1"
+          value="16" />
+      </div>
+
+      <div>
+        <label for="colorPicker">Star Color:</label>
+        <input
+          type="color"
+          id="colorPicker"
+          name="colorPicker"
+          value="#ffffff" />
+      </div>
 
       <div class="parent"></div>
-      <button id="reset">Reset Sky</button>
+
+      <div>
+        <button id="reset">Reset Sky</button>
+      </div>
     </main>
+
     <script src="script.js"></script>
   </body>
 </html>
